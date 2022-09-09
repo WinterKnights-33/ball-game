@@ -1,0 +1,272 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    background-color: blueviolet;
+    background-size: cover;
+}
+#game
+{
+    width: 400px;
+    height: 500px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 20vh;
+    left: 35vh;
+    overflow: hidden;
+    background-color: rgba(254, 254, 254, 0.07);
+}
+#character
+{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(229, 121, 193);
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    top: 400px;
+    left: 190px;
+    z-index: 10;
+}
+.block
+{
+    width: 400px;
+    height: 20px;
+    background-color: black;
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+    background: linear-gradient(to bottom right, rgb(13, 211, 242), rgb(255, 180, 192));
+    -webkit-background-clip: border-box;
+    color: transparent;
+}
+.hole
+{
+    width: 40px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.08);
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+}
+
+/* Ghost start */
+
+.container
+{
+    display: flex;
+    align-items: center;
+    background: #00034b;
+    width: 150px;
+    height: 226px;
+}
+
+#charactr {
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.ghost
+{
+    position: relative;
+    width: 150px;
+    height: 225px;
+    background: #ffffff;
+    box-shadow: -17px 0px 6px #dbdbdb inset, 0 0 50px #5939db;
+    border-radius: 100px 100px 0 0;
+    animation: float 2s infinite;
+    z-index: 3;
+}
+
+#ghost-eyes
+{
+    position: relative;
+    margin-top: 60%;
+}
+#ghost-eye-left {
+    margin-left: 0%;
+    margin-top: 60px;
+    margin-left: 90px;
+}
+#ghost-eye-right {
+    margin-left: 10%;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+
+.ghost-eye-left {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #000232;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+.ghost-eye-left {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #000232;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+.ghost-dimples {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #ffbeff;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.ghost-feet {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+#ghost-foot-one {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 172px;
+    background-color: #ffffff;
+}
+
+#ghost-foot-two  {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 35px;
+    margin-top: -38px;
+    background-color: #ffffff;
+}
+
+#ghost-foot-three  {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 73px;
+    margin-top: -40px;
+    background-color: #ffffff;
+}
+
+#ghost-foot-four  {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 110px;
+    margin-top: -41px;
+    background-color: #ffffff;
+    box-shadow: -12px -9px 6px #dbdbdb inset;
+}
+
+.shadow
+{
+    background: #000232;
+    width: 150px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 50%;
+    animation: shadow 2s infinite;
+}
+@keyframes float
+{
+    0%,
+    100%
+    {
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(-15px);
+    }
+}
+@keyframes shadow
+{
+    0%,
+    100%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(0.9);
+    }
+}
+
+
+
+
+
+
+/*
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #00034b;
+}
+.ghost
+{
+    position: relative;
+    width: 150px;
+    height: 225px;
+    background: #ffffff;
+    box-shadow: -17px 0px 0px #dbdbdb inset, 0 0 50px #5939db;
+    border-radius: 100px 100px 0 0;
+    animation: float 2s infinite;
+}
+.ghost__eyes
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 70px 0 0;
+    width: 90px;
+    height: 20px;
+    content: "";
+    display: block;
+    width: 15px;
+    height: 25px;
+    background: #00034b;
+    border-radius: 50%;
+}
+.ghost__dimples
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 35px 0 0;
+    width: 130px;
+    height: 20px;
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #ffbeff;
+    border-radius: 50%;
+}
+.ghost__feet, .ghost__feet-foot
+{
+    width: 100%;
+    position: absolute;
+    bottom: -13px;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    height: 26px;
+    border-radius: 50%;
+    background: #ffffff;
+    background-image: linear-gradient(to right, #ffffff 55%, #dbdbdb 45%);
+}
+*/
